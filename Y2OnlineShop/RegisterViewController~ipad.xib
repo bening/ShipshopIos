@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
+            <connections>
+                <outlet property="birthdate" destination="oiy-WG-K7f" id="04h-p5-TaM"/>
+                <outlet property="cancelDatePicker" destination="svl-ly-kyE" id="Wwl-25-KaS"/>
+                <outlet property="cancelGenderPicker" destination="H55-ms-3Iu" id="rrV-rx-1eu"/>
+                <outlet property="datePicker" destination="Iys-Fe-Bsn" id="n73-Sb-PDi"/>
+                <outlet property="datePickerToolbar" destination="zKW-f7-aUU" id="TWz-e8-jPj"/>
+                <outlet property="datepickerLayout" destination="nNk-HG-LAh" id="PE7-Nw-xla"/>
+                <outlet property="doneDatePicker" destination="BDb-Jt-k6V" id="oxK-lj-4rz"/>
+                <outlet property="doneGenderPicker" destination="grT-zK-fgA" id="76d-ZA-4kR"/>
+                <outlet property="email" destination="SYF-mi-uTb" id="hBu-xD-8Om"/>
+                <outlet property="gender" destination="8en-mR-nau" id="trZ-Xh-Efl"/>
+                <outlet property="genderPickerLayout" destination="Vs1-HC-4hc" id="Il0-AB-wRh"/>
+                <outlet property="genderToolbar" destination="d1g-fP-KbI" id="sYF-lJ-nbK"/>
+                <outlet property="loading" destination="6ea-mx-muW" id="J7e-93-g8L"/>
+                <outlet property="loadingOverlay" destination="b8B-Ha-eT2" id="BqO-Vc-Gg5"/>
+                <outlet property="loadingWrapper" destination="gp3-Xy-6WG" id="SBz-VB-LOo"/>
+                <outlet property="name" destination="hZ1-OP-r61" id="Qwe-3D-4yK"/>
+                <outlet property="password" destination="gfP-lg-nn9" id="I6c-pc-xf3"/>
+                <outlet property="passwordConfirmation" destination="k2i-8H-Q8Y" id="Iok-M3-snY"/>
+                <outlet property="phone" destination="CTs-33-tt4" id="UCN-eA-IwW"/>
+                <outlet property="scrollView" destination="3k1-TV-FFu" id="YUF-yh-dJs"/>
+                <outlet property="submitBtn" destination="qNI-oj-ART" id="ot5-hg-Pyv"/>
+                <outlet property="tableView" destination="eQa-oE-0yz" id="C6e-yq-b1U"/>
+                <outlet property="titleGenderPicker" destination="MCn-ZH-cQM" id="QAV-az-7OL"/>
+                <outlet property="username" destination="RD8-Cv-5si" id="JsT-G6-k1X"/>
+                <outlet property="view" destination="iN0-l3-epB" id="NIX-N3-LFr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3k1-TV-FFu">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nama Pengguna" minimumFontSize="17" background="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="RD8-Cv-5si" userLabel="username" customClass="TextFieldValidator">
+                            <rect key="frame" x="198" y="82" width="371" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="cKh-ba-gSV"/>
+                                <constraint firstAttribute="width" constant="371" id="cR1-pa-E2U"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="presentInView" destination="iN0-l3-epB" id="bYg-hJ-dlA"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Alamat Email" minimumFontSize="17" background="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="SYF-mi-uTb" userLabel="Email" customClass="TextFieldValidator">
+                            <rect key="frame" x="199" y="158" width="371" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="371" id="67H-AT-ZzL"/>
+                                <constraint firstAttribute="height" constant="50" id="Oyf-xT-Zdn"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="presentInView" destination="iN0-l3-epB" id="95v-ez-3YB"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" background="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="gfP-lg-nn9" userLabel="Password" customClass="TextFieldValidator">
+                            <rect key="frame" x="199" y="231" width="371" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="7q6-Vz-o93"/>
+                                <constraint firstAttribute="width" constant="371" id="Sb3-8G-LpE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <connections>
+                                <outlet property="presentInView" destination="iN0-l3-epB" id="M5f-hX-d5q"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Konfirmasi Password" minimumFontSize="17" background="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="k2i-8H-Q8Y" userLabel="Confirm Password" customClass="TextFieldValidator">
+                            <rect key="frame" x="199" y="301" width="371" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="8df-Hq-WYn"/>
+                                <constraint firstAttribute="width" constant="371" id="kkX-O6-6LD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            <connections>
+                                <outlet property="presentInView" destination="iN0-l3-epB" id="wfw-XA-0sO"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nama" minimumFontSize="17" background="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="hZ1-OP-r61" userLabel="Name" customClass="TextFieldValidator">
+                            <rect key="frame" x="199" y="373" width="371" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="371" id="RCt-oZ-Vzs"/>
+                                <constraint firstAttribute="height" constant="50" id="oYd-fg-dtt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="presentInView" destination="iN0-l3-epB" id="JkP-ZA-Oag"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Jenis Kelamin" minimumFontSize="17" background="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="8en-mR-nau" userLabel="Gender" customClass="TextFieldValidator">
+                            <rect key="frame" x="199" y="446" width="371" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="371" id="JSu-dA-Kte"/>
+                                <constraint firstAttribute="height" constant="50" id="swR-72-rjk"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="presentInView" destination="iN0-l3-epB" id="9zK-lR-szV"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Tanggal Lahir" minimumFontSize="17" background="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="oiy-WG-K7f" userLabel="Birthdate" customClass="TextFieldValidator">
+                            <rect key="frame" x="199" y="517" width="371" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="2pg-hV-kfp"/>
+                                <constraint firstAttribute="width" constant="371" id="YMo-J2-Igm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="presentInView" destination="iN0-l3-epB" id="ZNz-ct-VHa"/>
+                            </connections>
+                        </textField>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Nomor Telepon/HP" minimumFontSize="17" background="input.png" translatesAutoresizingMaskIntoConstraints="NO" id="CTs-33-tt4" userLabel="Phone" customClass="TextFieldValidator">
+                            <rect key="frame" x="199" y="589" width="371" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="371" id="0KK-dI-EQU"/>
+                                <constraint firstAttribute="height" constant="50" id="2gJ-Fn-GPX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            <connections>
+                                <outlet property="presentInView" destination="iN0-l3-epB" id="opE-G5-iLv"/>
+                            </connections>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNI-oj-ART" userLabel="Submit Btn">
+                            <rect key="frame" x="199" y="770" width="371" height="72"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="371" id="FXp-DF-gpY"/>
+                                <constraint firstAttribute="height" constant="72" id="sFK-O3-xrz"/>
+                            </constraints>
+                            <state key="normal" image="btn_submit.png">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="registrationProcess:" destination="-1" eventType="touchUpInside" id="Cae-2O-Oap"/>
+                            </connections>
+                        </button>
+                        <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nNk-HG-LAh" userLabel="Date Picker Layout">
+                            <rect key="frame" x="199" y="289" width="371" height="260"/>
+                            <subviews>
+                                <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Iys-Fe-Bsn">
+                                    <rect key="frame" x="0.0" y="44" width="371" height="216"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="439205596.81076902">
+                                        <!--2014-12-02 09:33:16 +0000-->
+                                    </date>
+                                </datePicker>
+                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKW-f7-aUU">
+                                    <rect key="frame" x="0.0" y="0.0" width="371" height="44"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <items>
+                                        <barButtonItem title="Batal" style="done" id="svl-ly-kyE">
+                                            <color key="tintColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="datepickerDismiss:" destination="-1" id="xdG-lc-tGo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem systemItem="flexibleSpace" id="xH4-gJ-121"/>
+                                        <barButtonItem title="Selesai" style="done" id="BDb-Jt-k6V">
+                                            <color key="tintColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="datepickerDone:" destination="-1" id="UP0-ze-8n5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </items>
+                                    <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </toolbar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Iys-Fe-Bsn" firstAttribute="leading" secondItem="nNk-HG-LAh" secondAttribute="leading" id="0Tp-OA-1wU"/>
+                                <constraint firstAttribute="trailing" secondItem="zKW-f7-aUU" secondAttribute="trailing" id="5Q3-iQ-xp0"/>
+                                <constraint firstAttribute="centerX" secondItem="zKW-f7-aUU" secondAttribute="centerX" id="VTv-wz-yCW"/>
+                                <constraint firstAttribute="centerX" secondItem="Iys-Fe-Bsn" secondAttribute="centerX" id="WxT-Aa-xpA"/>
+                                <constraint firstAttribute="trailing" secondItem="Iys-Fe-Bsn" secondAttribute="trailing" id="c6c-qK-3YZ"/>
+                                <constraint firstItem="zKW-f7-aUU" firstAttribute="leading" secondItem="nNk-HG-LAh" secondAttribute="leading" id="oiz-JW-dTY"/>
+                            </constraints>
+                        </view>
+                        <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vs1-HC-4hc" userLabel="Gender Picker Layout">
+                            <rect key="frame" x="199" y="237" width="371" height="260"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="2" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-oE-0yz">
+                                    <rect key="frame" x="0.0" y="45" width="371" height="130"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="4sp-rN-dOh"/>
+                                        <outlet property="delegate" destination="-1" id="WbD-BR-gQk"/>
+                                    </connections>
+                                </tableView>
+                                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1g-fP-KbI">
+                                    <rect key="frame" x="0.0" y="0.0" width="371" height="44"/>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <items>
+                                        <barButtonItem title="Batal" style="done" id="H55-ms-3Iu">
+                                            <color key="tintColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="genderPickerDismiss:" destination="-1" id="jkR-2j-gbl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem systemItem="flexibleSpace" id="lx8-1x-LOh"/>
+                                        <barButtonItem title="Jenis Kelamin" id="MCn-ZH-cQM"/>
+                                        <barButtonItem style="plain" systemItem="flexibleSpace" id="J3B-4u-Mox"/>
+                                        <barButtonItem title="Selesai" style="done" id="grT-zK-fgA">
+                                            <color key="tintColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="genderPickerDone:" destination="-1" id="ceO-is-jgx"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </items>
+                                    <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </toolbar>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="d1g-fP-KbI" secondAttribute="trailing" id="Fd6-3N-vXB"/>
+                                <constraint firstAttribute="trailing" secondItem="eQa-oE-0yz" secondAttribute="trailing" id="T75-FS-6i6"/>
+                                <constraint firstItem="eQa-oE-0yz" firstAttribute="leading" secondItem="Vs1-HC-4hc" secondAttribute="leading" id="UAX-Xo-dQV"/>
+                                <constraint firstAttribute="centerX" secondItem="d1g-fP-KbI" secondAttribute="centerX" id="Z73-4A-Zt5"/>
+                                <constraint firstItem="d1g-fP-KbI" firstAttribute="leading" secondItem="Vs1-HC-4hc" secondAttribute="leading" id="rEP-te-5gg"/>
+                                <constraint firstAttribute="centerX" secondItem="eQa-oE-0yz" secondAttribute="centerX" id="rz7-EK-lgH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="8en-mR-nau" secondAttribute="centerX" id="0nn-OF-URh"/>
+                        <constraint firstItem="nNk-HG-LAh" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="0uR-4q-HaS"/>
+                        <constraint firstAttribute="centerX" secondItem="oiy-WG-K7f" secondAttribute="centerX" id="154-64-35F"/>
+                        <constraint firstAttribute="centerX" secondItem="RD8-Cv-5si" secondAttribute="centerX" id="1LA-78-OOX"/>
+                        <constraint firstItem="SYF-mi-uTb" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="47d-N5-8aw"/>
+                        <constraint firstItem="oiy-WG-K7f" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="62W-Gu-ajN"/>
+                        <constraint firstItem="SYF-mi-uTb" firstAttribute="top" secondItem="RD8-Cv-5si" secondAttribute="bottom" constant="26" id="6pa-hf-50f"/>
+                        <constraint firstAttribute="trailing" secondItem="qNI-oj-ART" secondAttribute="trailing" constant="198" id="8Wj-yb-P1t"/>
+                        <constraint firstAttribute="trailing" secondItem="hZ1-OP-r61" secondAttribute="trailing" constant="198" id="9Rs-eL-sQd"/>
+                        <constraint firstAttribute="centerX" secondItem="hZ1-OP-r61" secondAttribute="centerX" id="9pM-ic-lvN"/>
+                        <constraint firstItem="gfP-lg-nn9" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="AuT-Gh-gcq"/>
+                        <constraint firstItem="RD8-Cv-5si" firstAttribute="top" secondItem="3k1-TV-FFu" secondAttribute="top" constant="82" id="B4t-kJ-JMt"/>
+                        <constraint firstAttribute="trailing" secondItem="Vs1-HC-4hc" secondAttribute="trailing" constant="198" id="F0r-dB-Txk"/>
+                        <constraint firstItem="Vs1-HC-4hc" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="GzS-UW-9oZ"/>
+                        <constraint firstAttribute="trailing" secondItem="8en-mR-nau" secondAttribute="trailing" constant="198" id="KFt-sR-QgB"/>
+                        <constraint firstItem="CTs-33-tt4" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="Pdj-Xf-GFf"/>
+                        <constraint firstItem="k2i-8H-Q8Y" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="Tqf-AE-CK0"/>
+                        <constraint firstAttribute="trailing" secondItem="RD8-Cv-5si" secondAttribute="trailing" constant="199" id="Vdh-w0-NhE"/>
+                        <constraint firstAttribute="trailing" secondItem="k2i-8H-Q8Y" secondAttribute="trailing" constant="198" id="Vot-Gy-opY"/>
+                        <constraint firstAttribute="centerX" secondItem="SYF-mi-uTb" secondAttribute="centerX" id="Y5k-AB-zFi"/>
+                        <constraint firstAttribute="trailing" secondItem="nNk-HG-LAh" secondAttribute="trailing" constant="198" id="YCE-VN-4oE"/>
+                        <constraint firstItem="hZ1-OP-r61" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="dJV-JK-VLE"/>
+                        <constraint firstItem="qNI-oj-ART" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="e0r-60-DXM"/>
+                        <constraint firstAttribute="centerX" secondItem="nNk-HG-LAh" secondAttribute="centerX" id="fOh-HC-i1w"/>
+                        <constraint firstAttribute="centerX" secondItem="Vs1-HC-4hc" secondAttribute="centerX" id="fdP-6v-x8w"/>
+                        <constraint firstItem="8en-mR-nau" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="199" id="gHb-5S-G4Y"/>
+                        <constraint firstAttribute="centerX" secondItem="k2i-8H-Q8Y" secondAttribute="centerX" id="gT3-wD-yrK"/>
+                        <constraint firstAttribute="trailing" secondItem="SYF-mi-uTb" secondAttribute="trailing" constant="198" id="hOh-NJ-hPg"/>
+                        <constraint firstItem="RD8-Cv-5si" firstAttribute="leading" secondItem="3k1-TV-FFu" secondAttribute="leading" constant="198" id="hzz-Bb-coZ"/>
+                        <constraint firstAttribute="trailing" secondItem="oiy-WG-K7f" secondAttribute="trailing" constant="198" id="iRg-eW-3GC"/>
+                        <constraint firstAttribute="centerX" secondItem="qNI-oj-ART" secondAttribute="centerX" id="pjd-en-Q6j"/>
+                        <constraint firstAttribute="centerX" secondItem="gfP-lg-nn9" secondAttribute="centerX" id="pkl-rZ-58Y"/>
+                        <constraint firstAttribute="centerX" secondItem="CTs-33-tt4" secondAttribute="centerX" id="rO8-L2-M98"/>
+                        <constraint firstAttribute="trailing" secondItem="CTs-33-tt4" secondAttribute="trailing" constant="198" id="sz5-Cj-Xo6"/>
+                        <constraint firstAttribute="bottom" secondItem="qNI-oj-ART" secondAttribute="bottom" constant="80" id="tME-gp-HfN"/>
+                        <constraint firstAttribute="trailing" secondItem="gfP-lg-nn9" secondAttribute="trailing" constant="198" id="yoe-rm-bc6"/>
+                    </constraints>
+                </scrollView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-Ha-eT2" userLabel="Opaque Overlay">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp3-Xy-6WG" userLabel="Loading View">
+                            <rect key="frame" x="324" y="452" width="120" height="120"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="6ea-mx-muW">
+                                    <rect key="frame" x="31" y="19" width="57" height="37"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="37" id="vC1-TX-LOC"/>
+                                        <constraint firstAttribute="width" constant="57" id="zTS-6w-ryi"/>
+                                    </constraints>
+                                    <color key="color" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </activityIndicatorView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signing Up..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3E-TT-a4R">
+                                    <rect key="frame" x="10" y="64" width="100" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="f3m-kF-fwx"/>
+                                        <constraint firstAttribute="width" constant="100" id="qdN-KT-HLo"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="6ea-mx-muW" secondAttribute="centerX" id="77Y-VB-ook"/>
+                                <constraint firstAttribute="height" constant="120" id="bFw-hh-5Sj"/>
+                                <constraint firstItem="o3E-TT-a4R" firstAttribute="top" secondItem="6ea-mx-muW" secondAttribute="bottom" constant="8" id="cZg-4M-icX"/>
+                                <constraint firstAttribute="centerX" secondItem="o3E-TT-a4R" secondAttribute="centerX" id="j3u-zA-7KM"/>
+                                <constraint firstAttribute="width" constant="120" id="keM-DP-Ve0"/>
+                                <constraint firstItem="6ea-mx-muW" firstAttribute="top" secondItem="gp3-Xy-6WG" secondAttribute="top" constant="19" id="zQd-O7-45H"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.38317340350000001" green="0.38317340350000001" blue="0.38317340350000001" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="gp3-Xy-6WG" secondAttribute="centerY" id="hxB-qb-gR5"/>
+                        <constraint firstAttribute="centerX" secondItem="gp3-Xy-6WG" secondAttribute="centerX" id="kQj-RZ-Oq2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3k1-TV-FFu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EJu-uS-zBA"/>
+                <constraint firstItem="b8B-Ha-eT2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IBX-eg-KG1"/>
+                <constraint firstItem="b8B-Ha-eT2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Tk0-LS-ynv"/>
+                <constraint firstItem="3k1-TV-FFu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YAk-VM-epj"/>
+                <constraint firstAttribute="trailing" secondItem="b8B-Ha-eT2" secondAttribute="trailing" id="nZ5-Gw-Qs8"/>
+                <constraint firstAttribute="bottom" secondItem="b8B-Ha-eT2" secondAttribute="bottom" id="o9Z-nD-AqK"/>
+                <constraint firstAttribute="bottom" secondItem="3k1-TV-FFu" secondAttribute="bottom" id="rYs-Ge-Hny"/>
+                <constraint firstAttribute="trailing" secondItem="3k1-TV-FFu" secondAttribute="trailing" id="sWK-PY-LuE"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_submit.png" width="502" height="98"/>
+        <image name="input.png" width="502" height="80"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

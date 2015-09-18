@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Fc-hV-cRa" customClass="ProductImageCell">
+            <rect key="frame" x="0.0" y="0.0" width="230" height="274"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="230" height="274"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_no_prod.png" translatesAutoresizingMaskIntoConstraints="NO" id="eRi-cH-esW" userLabel="Product Image">
+                        <rect key="frame" x="0.0" y="6" width="230" height="224"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvM-dD-1ZR" userLabel="Close Btn">
+                        <rect key="frame" x="203" y="-3" width="30" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="dTB-cA-rEM"/>
+                            <constraint firstAttribute="height" constant="30" id="lb4-ag-tqh"/>
+                        </constraints>
+                        <state key="normal" image="close-button-2.png">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted" image="close-button-1.png"/>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Warna" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hlx-3L-IWN">
+                        <rect key="frame" x="5" y="238" width="220" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="ap3-ib-4fg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="PvM-dD-1ZR" firstAttribute="top" secondItem="5Fc-hV-cRa" secondAttribute="top" constant="-3" id="AZI-X5-ST2"/>
+                <constraint firstItem="eRi-cH-esW" firstAttribute="trailing" secondItem="Hlx-3L-IWN" secondAttribute="trailing" constant="5" id="K2Q-oz-oJY"/>
+                <constraint firstItem="eRi-cH-esW" firstAttribute="centerX" secondItem="5Fc-hV-cRa" secondAttribute="centerX" id="NzQ-nB-vfU"/>
+                <constraint firstAttribute="trailing" secondItem="PvM-dD-1ZR" secondAttribute="trailing" constant="-3" id="PvZ-Z7-rRq"/>
+                <constraint firstItem="eRi-cH-esW" firstAttribute="leading" secondItem="5Fc-hV-cRa" secondAttribute="leading" id="RN3-Be-eXD"/>
+                <constraint firstItem="eRi-cH-esW" firstAttribute="top" secondItem="5Fc-hV-cRa" secondAttribute="top" constant="6" id="ZuE-K9-4rQ"/>
+                <constraint firstItem="Hlx-3L-IWN" firstAttribute="top" secondItem="eRi-cH-esW" secondAttribute="bottom" constant="8" id="fSf-yd-OoF"/>
+                <constraint firstItem="eRi-cH-esW" firstAttribute="leading" secondItem="Hlx-3L-IWN" secondAttribute="leading" constant="-5" id="pLA-EI-ZV4"/>
+                <constraint firstAttribute="bottom" secondItem="Hlx-3L-IWN" secondAttribute="bottom" constant="6" id="srg-fe-Y8F"/>
+            </constraints>
+            <size key="customSize" width="50" height="127"/>
+            <connections>
+                <outlet property="closeBtn" destination="PvM-dD-1ZR" id="a6L-zJ-F0T"/>
+                <outlet property="color" destination="Hlx-3L-IWN" id="cst-fX-Qgr"/>
+                <outlet property="image" destination="eRi-cH-esW" id="1Ay-wz-zO5"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="close-button-1.png" width="50" height="50"/>
+        <image name="close-button-2.png" width="50" height="50"/>
+        <image name="icon_no_prod.png" width="500" height="500"/>
+    </resources>
+</document>

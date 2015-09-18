@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WishListViewController">
+            <connections>
+                <outlet property="collItem" destination="4xk-M2-Jlr" id="fzB-UM-3Ef"/>
+                <outlet property="view" destination="iN0-l3-epB" id="g9c-Bf-MEN"/>
+                <outlet property="viewColl" destination="kId-7n-A9z" id="nny-K1-Xe9"/>
+                <outlet property="viewEmpty" destination="7Ac-9N-jik" id="7Ua-M4-FuD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kId-7n-A9z">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="4xk-M2-Jlr">
+                            <rect key="frame" x="20" y="20" width="728" height="984"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="30" id="XBc-Rw-GnC">
+                                <size key="itemSize" width="340" height="340"/>
+                                <size key="headerReferenceSize" width="0.0" height="30"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="IAO-KH-tO0"/>
+                                <outlet property="delegate" destination="-1" id="UeJ-ef-Vw7"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="4xk-M2-Jlr" secondAttribute="bottom" constant="20" id="RKZ-N7-YqW"/>
+                        <constraint firstItem="4xk-M2-Jlr" firstAttribute="leading" secondItem="kId-7n-A9z" secondAttribute="leading" constant="20" id="bCz-ya-wPf"/>
+                        <constraint firstItem="4xk-M2-Jlr" firstAttribute="top" secondItem="kId-7n-A9z" secondAttribute="top" constant="20" id="fuJ-PB-5YH"/>
+                        <constraint firstAttribute="trailing" secondItem="4xk-M2-Jlr" secondAttribute="trailing" constant="20" id="uIU-nt-Jmk"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ac-9N-jik">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="wishlist.png" translatesAutoresizingMaskIntoConstraints="NO" id="I51-T6-rma">
+                            <rect key="frame" x="20" y="20" width="728" height="780"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your wishlist is empty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ev-qU-sh3">
+                            <rect key="frame" x="20" y="520" width="728" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wyr-nu-qZH">
+                            <rect key="frame" x="20" y="850" width="728" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.80392156859999997" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="Izj-M9-bAG"/>
+                                <constraint firstAttribute="width" constant="728" id="rMN-AL-nb8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                            <state key="normal" title="Lanjut Berbelanja">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="I51-T6-rma" secondAttribute="centerX" id="3tT-tH-Sko"/>
+                        <constraint firstAttribute="centerX" secondItem="Wyr-nu-qZH" secondAttribute="centerX" id="GBb-h4-i2F"/>
+                        <constraint firstItem="5ev-qU-sh3" firstAttribute="top" secondItem="7Ac-9N-jik" secondAttribute="centerY" multiplier="1.2" id="NZY-6h-9yu"/>
+                        <constraint firstAttribute="centerX" secondItem="5ev-qU-sh3" secondAttribute="centerX" id="W9y-bv-leD"/>
+                        <constraint firstItem="Wyr-nu-qZH" firstAttribute="top" secondItem="7Ac-9N-jik" secondAttribute="centerY" multiplier="1.6" id="scb-JI-GDz"/>
+                        <constraint firstItem="I51-T6-rma" firstAttribute="top" secondItem="7Ac-9N-jik" secondAttribute="centerY" multiplier="0.7" id="wwB-Tc-uuB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kId-7n-A9z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5S7-bk-h1j"/>
+                <constraint firstItem="7Ac-9N-jik" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9lG-zi-avb"/>
+                <constraint firstAttribute="trailing" secondItem="kId-7n-A9z" secondAttribute="trailing" id="PRa-WY-3yF"/>
+                <constraint firstItem="7Ac-9N-jik" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kV4-Oo-c4L"/>
+                <constraint firstItem="kId-7n-A9z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="lo7-Dl-2e7"/>
+                <constraint firstAttribute="bottom" secondItem="kId-7n-A9z" secondAttribute="bottom" id="oDa-TP-tP4"/>
+                <constraint firstAttribute="trailing" secondItem="7Ac-9N-jik" secondAttribute="trailing" id="vHV-LY-4Pw"/>
+                <constraint firstAttribute="bottom" secondItem="7Ac-9N-jik" secondAttribute="bottom" id="zGm-nj-bTj"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="wishlist.png" width="160" height="144"/>
+    </resources>
+</document>

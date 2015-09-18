@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleProductImageViewController">
+            <connections>
+                <outlet property="imageView" destination="GGK-fM-lPa" id="EQR-bG-3RM"/>
+                <outlet property="view" destination="iN0-l3-epB" id="WwJ-P9-DcS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_no_img.png" translatesAutoresizingMaskIntoConstraints="NO" id="GGK-fM-lPa">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GGK-fM-lPa" secondAttribute="trailing" id="ISK-MW-ave"/>
+                <constraint firstAttribute="bottom" secondItem="GGK-fM-lPa" secondAttribute="bottom" id="a5b-my-ddL"/>
+                <constraint firstItem="GGK-fM-lPa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hzy-Vo-QPt"/>
+                <constraint firstItem="GGK-fM-lPa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="y2m-IJ-cLu"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_no_img.png" width="500" height="500"/>
+    </resources>
+</document>

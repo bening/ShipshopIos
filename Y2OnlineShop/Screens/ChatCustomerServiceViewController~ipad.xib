@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatCustomerServiceViewController">
+            <connections>
+                <outlet property="chatBox" destination="wfH-VO-d8e" id="E4e-eE-PFq"/>
+                <outlet property="sendBtn" destination="KTE-i0-TSB" id="evx-ma-iBh"/>
+                <outlet property="view" destination="iN0-l3-epB" id="AwY-15-bIP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIb-BH-XVQ">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="79"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab8-Jx-i4O">
+                            <rect key="frame" x="20" y="15" width="58" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="79" id="Crq-dg-ADN"/>
+                    </constraints>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfH-VO-d8e">
+                    <rect key="frame" x="20" y="868" width="674" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="GTR-jf-fzl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="send"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="e2D-nk-DJh"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTE-i0-TSB">
+                    <rect key="frame" x="694" y="868" width="54" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="54" id="4Qt-2t-zdU"/>
+                        <constraint firstAttribute="height" constant="50" id="Zvg-XW-7Uw"/>
+                    </constraints>
+                    <state key="normal" title="Kirim">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="sendChat:" destination="-1" eventType="touchUpInside" id="XQa-3U-BPj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="KTE-i0-TSB" secondAttribute="bottom" constant="106" id="1hG-UR-kBn"/>
+                <constraint firstAttribute="trailing" secondItem="AIb-BH-XVQ" secondAttribute="trailing" id="7HI-il-mib"/>
+                <constraint firstItem="AIb-BH-XVQ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WQL-bh-14k"/>
+                <constraint firstItem="AIb-BH-XVQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="azV-lI-9Ok"/>
+                <constraint firstItem="wfH-VO-d8e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="h5m-XK-xRs"/>
+                <constraint firstAttribute="trailing" secondItem="KTE-i0-TSB" secondAttribute="trailing" constant="20" id="hGS-ln-2Zw"/>
+                <constraint firstItem="KTE-i0-TSB" firstAttribute="leading" secondItem="wfH-VO-d8e" secondAttribute="trailing" id="iCV-oL-edn"/>
+                <constraint firstAttribute="bottom" secondItem="wfH-VO-d8e" secondAttribute="bottom" constant="106" id="kJe-mC-smP"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

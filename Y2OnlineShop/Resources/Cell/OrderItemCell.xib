@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="0nz-wR-QZG" customClass="OrderItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0nz-wR-QZG" id="9Mo-cZ-MX1">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_no_img.png" translatesAutoresizingMaskIntoConstraints="NO" id="xte-CH-KiK">
+                        <rect key="frame" x="3" y="3" width="73" height="73"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="73" id="7Sy-Oo-lZu"/>
+                            <constraint firstAttribute="width" constant="73" id="VfL-uT-Ppd"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="170" translatesAutoresizingMaskIntoConstraints="NO" id="WDV-Dy-77a" userLabel="nama owner" customClass="RWLabel">
+                        <rect key="frame" x="79" y="3" width="170" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="CWX-Td-Pue"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="170" translatesAutoresizingMaskIntoConstraints="NO" id="KtJ-Vs-CRN" userLabel="nama produk" customClass="RWLabel">
+                        <rect key="frame" x="79" y="20" width="170" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="6PT-Ka-Dhr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="170" translatesAutoresizingMaskIntoConstraints="NO" id="gwo-11-JkI" userLabel="sku produk" customClass="RWLabel">
+                        <rect key="frame" x="79" y="37" width="170" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="zrg-cf-I5s"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="170" translatesAutoresizingMaskIntoConstraints="NO" id="bpy-UU-l1R" userLabel="harga produk" customClass="RWLabel">
+                        <rect key="frame" x="79" y="54" width="170" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="IGP-O8-0v0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="170" translatesAutoresizingMaskIntoConstraints="NO" id="tNB-di-web" userLabel="jumlah Item" customClass="RWLabel">
+                        <rect key="frame" x="79" y="71" width="170" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="gMp-8A-p4g"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8L-jD-O0Z">
+                        <rect key="frame" x="254" y="34" width="56" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="3ff-8L-ata"/>
+                            <constraint firstAttribute="width" constant="56" id="Wys-Tw-Y03"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="Retur">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WDV-Dy-77a" firstAttribute="leading" secondItem="xte-CH-KiK" secondAttribute="trailing" constant="3" id="0Py-Tx-PVX"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xte-CH-KiK" secondAttribute="bottom" constant="3" id="2qQ-lh-0bD"/>
+                    <constraint firstItem="V8L-jD-O0Z" firstAttribute="leading" secondItem="gwo-11-JkI" secondAttribute="trailing" constant="5" id="3Sk-YJ-5V3"/>
+                    <constraint firstItem="xte-CH-KiK" firstAttribute="top" secondItem="9Mo-cZ-MX1" secondAttribute="top" constant="3" id="6AV-ak-85q"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="top" secondItem="WDV-Dy-77a" secondAttribute="bottom" constant="1" id="6J7-V2-Lpk"/>
+                    <constraint firstItem="xte-CH-KiK" firstAttribute="leading" secondItem="9Mo-cZ-MX1" secondAttribute="leading" constant="3" id="EJJ-mY-1zi"/>
+                    <constraint firstAttribute="centerY" secondItem="V8L-jD-O0Z" secondAttribute="centerY" id="EKe-m6-u4x"/>
+                    <constraint firstAttribute="trailing" secondItem="V8L-jD-O0Z" secondAttribute="trailing" constant="10" id="FlZ-Vx-Bao"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="leading" secondItem="gwo-11-JkI" secondAttribute="leading" id="H5e-Wy-vqk"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="trailing" secondItem="gwo-11-JkI" secondAttribute="trailing" id="He6-Ou-hOe"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="leading" secondItem="bpy-UU-l1R" secondAttribute="leading" id="IAt-qe-QuT"/>
+                    <constraint firstItem="tNB-di-web" firstAttribute="top" secondItem="bpy-UU-l1R" secondAttribute="bottom" constant="1" id="JGb-ss-t3w"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="leading" secondItem="tNB-di-web" secondAttribute="leading" id="L5k-bM-Gij"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="trailing" secondItem="bpy-UU-l1R" secondAttribute="trailing" id="OD3-hr-vM6"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="leading" secondItem="WDV-Dy-77a" secondAttribute="leading" id="PY6-J9-a5W"/>
+                    <constraint firstAttribute="bottom" secondItem="tNB-di-web" secondAttribute="bottom" constant="3" id="aPC-y6-aEU"/>
+                    <constraint firstItem="gwo-11-JkI" firstAttribute="top" secondItem="KtJ-Vs-CRN" secondAttribute="bottom" constant="1" id="hbT-pu-TVK"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="trailing" secondItem="tNB-di-web" secondAttribute="trailing" id="kVP-Cj-IfT"/>
+                    <constraint firstItem="bpy-UU-l1R" firstAttribute="top" secondItem="gwo-11-JkI" secondAttribute="bottom" constant="1" id="wLW-jj-zeq"/>
+                    <constraint firstItem="WDV-Dy-77a" firstAttribute="top" secondItem="9Mo-cZ-MX1" secondAttribute="top" constant="3" id="ywR-le-RiD"/>
+                    <constraint firstItem="KtJ-Vs-CRN" firstAttribute="trailing" secondItem="WDV-Dy-77a" secondAttribute="trailing" id="zVy-6g-ncI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="productAmount" destination="tNB-di-web" id="KCr-K1-SKL"/>
+                <outlet property="productImage" destination="xte-CH-KiK" id="7Up-fb-Y1n"/>
+                <outlet property="productName" destination="KtJ-Vs-CRN" id="g2Y-ok-d4v"/>
+                <outlet property="productOwner" destination="WDV-Dy-77a" id="oXZ-sA-CuA"/>
+                <outlet property="productPrice" destination="bpy-UU-l1R" id="TFf-oM-TR0"/>
+                <outlet property="productSKU" destination="gwo-11-JkI" id="xhh-2f-xSW"/>
+                <outlet property="returBtn" destination="V8L-jD-O0Z" id="mdd-5r-XuM"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_no_img.png" width="500" height="500"/>
+    </resources>
+</document>

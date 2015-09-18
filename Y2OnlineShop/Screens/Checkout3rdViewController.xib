@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Checkout3rdViewController">
+            <connections>
+                <outlet property="backToHomeBtn" destination="auE-90-0XI" id="k1Y-dD-8Vs"/>
+                <outlet property="messageBox" destination="oJw-yF-jtJ" id="o1f-F5-lfb"/>
+                <outlet property="messageText" destination="Z8c-E0-3H2" id="Pnu-em-4q6"/>
+                <outlet property="thanksText" destination="3pW-uB-iX3" id="UVu-SD-oww"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3g-zp-gQY">
+                    <rect key="frame" x="20" y="20" width="728" height="439"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy-thank.png" translatesAutoresizingMaskIntoConstraints="NO" id="ff3-Kf-E2T">
+                            <rect key="frame" x="0.0" y="0.0" width="728" height="439"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="439" id="gWR-5S-qcb"/>
+                                <constraint firstAttribute="width" constant="728" id="zyO-wi-ARA"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJw-yF-jtJ">
+                            <rect key="frame" x="171" y="147" width="387" height="146"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TERIMA KASIH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pW-uB-iX3" userLabel="thanks">
+                                    <rect key="frame" x="1" y="43" width="387" height="33"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Telah berbelanja di Y2 Online Shop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8c-E0-3H2" userLabel="message">
+                                    <rect key="frame" x="1" y="74" width="387" height="16"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auE-90-0XI">
+                                    <rect key="frame" x="85" y="100" width="217" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <state key="normal" title="Kembali ke halaman awal">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="backToHome:" destination="-1" eventType="touchUpInside" id="89s-c5-bNt"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Z8c-E0-3H2" secondAttribute="trailing" id="4ma-px-THE"/>
+                                <constraint firstAttribute="height" constant="146" id="6IV-fU-8Tb"/>
+                                <constraint firstItem="Z8c-E0-3H2" firstAttribute="top" secondItem="oJw-yF-jtJ" secondAttribute="top" constant="74" id="Lo4-Z7-K0o"/>
+                                <constraint firstAttribute="width" constant="387" id="MTj-xq-hbY"/>
+                                <constraint firstItem="Z8c-E0-3H2" firstAttribute="leading" secondItem="oJw-yF-jtJ" secondAttribute="leading" id="VBJ-KV-y68"/>
+                                <constraint firstItem="3pW-uB-iX3" firstAttribute="leading" secondItem="oJw-yF-jtJ" secondAttribute="leading" id="WeJ-A6-fwj"/>
+                                <constraint firstAttribute="trailing" secondItem="3pW-uB-iX3" secondAttribute="trailing" id="fgG-TX-Ybs"/>
+                                <constraint firstItem="3pW-uB-iX3" firstAttribute="top" secondItem="oJw-yF-jtJ" secondAttribute="top" constant="43" id="vwO-ph-TaC"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerY" secondItem="ff3-Kf-E2T" secondAttribute="centerY" id="97H-hR-ZJF"/>
+                        <constraint firstAttribute="width" constant="728" id="GyR-od-C2R"/>
+                        <constraint firstAttribute="centerY" secondItem="oJw-yF-jtJ" secondAttribute="centerY" id="Pez-zL-bDY"/>
+                        <constraint firstAttribute="centerX" secondItem="ff3-Kf-E2T" secondAttribute="centerX" id="dAa-E0-KyD"/>
+                        <constraint firstAttribute="centerX" secondItem="oJw-yF-jtJ" secondAttribute="centerX" id="gWI-Yy-Jsy"/>
+                        <constraint firstAttribute="height" constant="439" id="xUg-00-6UY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="j3g-zp-gQY" secondAttribute="centerX" id="Qxu-z2-qUZ"/>
+                <constraint firstItem="j3g-zp-gQY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="jVT-ZD-pP5"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dummy-thank.png" width="763" height="534"/>
+    </resources>
+</document>

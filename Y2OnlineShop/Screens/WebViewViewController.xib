@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebViewViewController">
+            <connections>
+                <outlet property="content" destination="sI7-3X-PUY" id="Zow-62-KXY"/>
+                <outlet property="loading" destination="kaw-BC-gOP" id="zne-s6-vva"/>
+                <outlet property="loadingOverlay" destination="CTk-UX-W2W" id="VGv-SC-Vas"/>
+                <outlet property="loadingWrapper" destination="Bxz-qy-faU" id="gVT-Mj-CCZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sI7-3X-PUY">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </webView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTk-UX-W2W" userLabel="Opaque Overlay">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxz-qy-faU" userLabel="Loading View">
+                            <rect key="frame" x="309" y="437" width="150" height="150"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kaw-BC-gOP">
+                                    <rect key="frame" x="46" y="39" width="57" height="37"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="37" id="XjY-b3-Bbt"/>
+                                        <constraint firstAttribute="width" constant="57" id="abo-hy-PNg"/>
+                                    </constraints>
+                                    <color key="color" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </activityIndicatorView>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oxx-U1-B9s">
+                                    <rect key="frame" x="23" y="99" width="104" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="T5T-MI-qrV"/>
+                                        <constraint firstAttribute="width" constant="104" id="v1H-hd-0LB"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Oxx-U1-B9s" firstAttribute="top" secondItem="kaw-BC-gOP" secondAttribute="bottom" constant="23" id="03A-4E-xtj"/>
+                                <constraint firstAttribute="centerX" secondItem="kaw-BC-gOP" secondAttribute="centerX" id="0t6-h0-NmQ"/>
+                                <constraint firstItem="kaw-BC-gOP" firstAttribute="top" secondItem="Bxz-qy-faU" secondAttribute="top" constant="39" id="DpQ-YA-oy1"/>
+                                <constraint firstAttribute="centerX" secondItem="Oxx-U1-B9s" secondAttribute="centerX" id="P4N-7y-fpS"/>
+                                <constraint firstAttribute="height" constant="150" id="d8N-Y0-tLP"/>
+                                <constraint firstAttribute="width" constant="150" id="ge5-Gr-yiM"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.38317340350000001" green="0.38317340350000001" blue="0.38317340350000001" alpha="0.77000000000000002" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="Bxz-qy-faU" secondAttribute="centerX" id="7Ou-Pt-8fm"/>
+                        <constraint firstAttribute="centerY" secondItem="Bxz-qy-faU" secondAttribute="centerY" id="pi9-Nf-svi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CTk-UX-W2W" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5xy-v6-2zq"/>
+                <constraint firstItem="sI7-3X-PUY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8qr-XV-Klg"/>
+                <constraint firstItem="sI7-3X-PUY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FSQ-2b-koK"/>
+                <constraint firstItem="CTk-UX-W2W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Gsw-aF-VK7"/>
+                <constraint firstAttribute="bottom" secondItem="sI7-3X-PUY" secondAttribute="bottom" id="UQL-MV-2xq"/>
+                <constraint firstAttribute="trailing" secondItem="sI7-3X-PUY" secondAttribute="trailing" id="WXh-Qg-Rg6"/>
+                <constraint firstAttribute="trailing" secondItem="CTk-UX-W2W" secondAttribute="trailing" id="ZHF-0r-fw3"/>
+                <constraint firstAttribute="bottom" secondItem="CTk-UX-W2W" secondAttribute="bottom" id="ge0-6Q-rWs"/>
+            </constraints>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

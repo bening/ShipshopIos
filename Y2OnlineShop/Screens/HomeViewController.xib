@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="5056" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="iCarouselWrapper" destination="97o-C6-rod" id="afj-xe-Mzk"/>
+                <outlet property="imageScroller" destination="i4K-i1-xFl" id="xCs-OA-PeK"/>
+                <outlet property="loading" destination="MrR-DP-lpt" id="0Qb-Z8-Mah"/>
+                <outlet property="mainWrapper" destination="dMw-K6-maD" id="Tb4-aC-q8g"/>
+                <outlet property="pageControl" destination="qyz-3p-lQl" id="b9i-CW-jiS"/>
+                <outlet property="scrollerBot" destination="MEA-Nt-6Zu" id="RLR-pO-hci"/>
+                <outlet property="scrollerTop" destination="HGq-Iz-Vet" id="tpI-X3-p2w"/>
+                <outlet property="videoWrapper" destination="0wn-Gw-EGf" id="DPT-ec-QOb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Nex-5u-B33"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMw-K6-maD">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wn-Gw-EGf" userLabel="Video Wrapper">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="512"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4K-i1-xFl">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="512"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="Ndr-DR-Wam"/>
+                                    </connections>
+                                </scrollView>
+                                <pageControl alpha="0.69999999999999973" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qyz-3p-lQl">
+                                    <rect key="frame" x="0.0" y="475" width="768" height="37"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="currentPageIndicatorTintColor" red="0.92941176469999998" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </pageControl>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="qyz-3p-lQl" firstAttribute="top" secondItem="0wn-Gw-EGf" secondAttribute="top" constant="475" id="4UH-ib-lnZ"/>
+                                <constraint firstItem="i4K-i1-xFl" firstAttribute="top" secondItem="0wn-Gw-EGf" secondAttribute="top" id="BGU-es-m3x"/>
+                                <constraint firstAttribute="trailing" secondItem="i4K-i1-xFl" secondAttribute="trailing" id="C7c-rB-gcF"/>
+                                <constraint firstAttribute="bottom" secondItem="qyz-3p-lQl" secondAttribute="bottom" id="SBr-70-MTj"/>
+                                <constraint firstAttribute="bottom" secondItem="i4K-i1-xFl" secondAttribute="bottom" id="VbC-TB-P1k"/>
+                                <constraint firstAttribute="trailing" secondItem="qyz-3p-lQl" secondAttribute="trailing" id="kjh-wn-OUh"/>
+                                <constraint firstItem="qyz-3p-lQl" firstAttribute="leading" secondItem="0wn-Gw-EGf" secondAttribute="leading" id="ls7-JX-6Jj"/>
+                                <constraint firstItem="i4K-i1-xFl" firstAttribute="leading" secondItem="0wn-Gw-EGf" secondAttribute="leading" id="sw8-6U-4o7"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97o-C6-rod" userLabel="Carousel Wrapper">
+                            <rect key="frame" x="0.0" y="512" width="768" height="512"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGq-Iz-Vet" userLabel="ScrollerTop">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="256"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="vQS-W1-SYA"/>
+                                    </connections>
+                                </scrollView>
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEA-Nt-6Zu" userLabel="ScrollerBot">
+                                    <rect key="frame" x="0.0" y="256" width="768" height="256"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="-1" id="KK0-S3-Lwg"/>
+                                    </connections>
+                                </scrollView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerY" secondItem="HGq-Iz-Vet" secondAttribute="bottom" id="8ca-b8-HBA"/>
+                                <constraint firstItem="MEA-Nt-6Zu" firstAttribute="top" secondItem="97o-C6-rod" secondAttribute="centerY" id="LqR-KP-L2L"/>
+                                <constraint firstAttribute="bottom" secondItem="MEA-Nt-6Zu" secondAttribute="bottom" id="Qnf-XP-elO"/>
+                                <constraint firstItem="MEA-Nt-6Zu" firstAttribute="leading" secondItem="97o-C6-rod" secondAttribute="leading" id="ZDU-LH-ttP"/>
+                                <constraint firstAttribute="trailing" secondItem="MEA-Nt-6Zu" secondAttribute="trailing" id="ahD-qj-45s"/>
+                                <constraint firstAttribute="trailing" secondItem="HGq-Iz-Vet" secondAttribute="trailing" id="bD9-88-wgF"/>
+                                <constraint firstItem="HGq-Iz-Vet" firstAttribute="leading" secondItem="97o-C6-rod" secondAttribute="leading" id="d7K-s2-pSu"/>
+                                <constraint firstItem="HGq-Iz-Vet" firstAttribute="top" secondItem="97o-C6-rod" secondAttribute="top" id="sRF-ox-VjF"/>
+                            </constraints>
+                        </view>
+                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MrR-DP-lpt">
+                            <rect key="frame" x="374" y="502" width="37" height="37"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="color" red="0.92549019610000005" green="0.0" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="0wn-Gw-EGf" firstAttribute="top" secondItem="dMw-K6-maD" secondAttribute="top" id="9x2-aX-Wui"/>
+                        <constraint firstItem="0wn-Gw-EGf" firstAttribute="bottom" secondItem="dMw-K6-maD" secondAttribute="centerY" id="A1U-VL-c2G"/>
+                        <constraint firstItem="97o-C6-rod" firstAttribute="leading" secondItem="dMw-K6-maD" secondAttribute="leading" id="COS-8X-Sk2"/>
+                        <constraint firstAttribute="trailing" secondItem="97o-C6-rod" secondAttribute="trailing" id="DIQ-Sz-h9s"/>
+                        <constraint firstItem="97o-C6-rod" firstAttribute="top" secondItem="dMw-K6-maD" secondAttribute="centerY" id="Ga9-IM-JqC"/>
+                        <constraint firstAttribute="trailing" secondItem="0wn-Gw-EGf" secondAttribute="trailing" id="IiP-5L-XgR"/>
+                        <constraint firstAttribute="bottom" secondItem="97o-C6-rod" secondAttribute="bottom" id="UbB-Kp-n4S"/>
+                        <constraint firstItem="0wn-Gw-EGf" firstAttribute="leading" secondItem="dMw-K6-maD" secondAttribute="leading" id="Z1V-dS-fAB"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dMw-K6-maD" secondAttribute="trailing" id="8zH-YA-YFx"/>
+                <constraint firstItem="dMw-K6-maD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="U7F-pP-D41"/>
+                <constraint firstAttribute="bottom" secondItem="dMw-K6-maD" secondAttribute="bottom" id="abO-Q5-O5l"/>
+                <constraint firstItem="dMw-K6-maD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qTr-UU-tvd"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
